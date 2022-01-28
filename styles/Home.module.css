@@ -16,13 +16,12 @@
   color: black;
 }
 .socialContainer {
+  padding-top: 10px;
   display: flex;
-  flex-direction: row;
-  padding-top: 10px; 
-  width: 100%;
+  flex-direction: row; 
 }
 a.social {
-  margin: auto;
+  margin: 0 1rem;
   transition: transform 250ms;
   display: inline-block;
 }
@@ -30,7 +29,7 @@ a.social:hover {
   transform: translateY(-2px);
 }
 a.socialLeft {
-  margin: auto;
+  margin-right: 1rem;
   transition: transform 250ms;
   display: inline-block;
 }

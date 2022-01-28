@@ -6,37 +6,42 @@ import {
     faLinkedin,
     faInstagram,
 } from '@fortawesome/free-brands-svg-icons'
-import { Box, Stack, Heading } from "@chakra-ui/react";
+import { FaGithub, FaYoutube, FaLinkedin, FaInstagram } from 'react-icons/fa';
+
+import { Box, Stack, Heading, Link, Icon } from "@chakra-ui/react";
 import styles from '../styles/Home.module.css'
+
 
 export default function SocialMedia() {
     return (
     <Box className={styles.socialContainer}>
       
-      <a
+      <Link
         href="https://github.com/xavieryn"
         className={styles.iconSocial, styles.socialLeft}
       >
-        <FontAwesomeIcon icon={faGithub} width={'30%'} height={'auto'}/>
-      </a>
-      <a
+        <Icon as={FaGithub} w={[3,6,8]} h={[3,6,8]}/>
+
+      </Link>
+      <Link
         href="https://www.linkedin.com/in/xavier-nishikawa-a89191221/"
         className={styles.iconSocial, styles.social}
       >
-        <FontAwesomeIcon icon={faLinkedin} width={'30%'} height={'auto'}/>
-      </a>
-      <a    
+        <Icon as={FaLinkedin} w={[3,6,8]} h={[3,6,8]} />
+      </Link>
+      <Link 
         href="https://www.youtube.com/channel/UCUTDUsHh1ZDDW6jA3zlOhTw"
         className={styles.iconSocial, styles.social}
       >
-        <FontAwesomeIcon icon={faYoutube} width={'35%'} height={'auto'}/>
-      </a>
-      <a
+        <Icon as={FaYoutube} w={[3,6,8]} h={[3,6,8]}/>
+
+      </Link>
+      <Link
         href="https://www.instagram.com/xavierynx/"
         className={styles.iconSocial, styles.social}
       >
-        <FontAwesomeIcon icon={faInstagram} width={'30%'} height={'auto'}/>
-      </a>
+        <Icon as={FaInstagram} w={[3,6,8]} h={[3,6,8]}/>
+      </Link>
     </Box>
     )
 }
