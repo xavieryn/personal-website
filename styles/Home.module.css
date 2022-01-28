@@ -1,10 +1,39 @@
+
 .container {
   flex: 1;
 }
 .main {
   flex: 1;
 }
-.background-image {
-  height:100%; 
-  width:auto;
+
+
+/* header */
+.hrHeader {
+  width: 75%; 
+}
+/*soccial media */
+.iconSocial {
+  color: black;
+}
+.socialContainer {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px; 
+  width: 100%;
+}
+a.social {
+  margin: auto;
+  transition: transform 250ms;
+  display: inline-block;
+}
+a.social:hover {
+  transform: translateY(-2px);
+}
+a.socialLeft {
+  margin: auto;
+  transition: transform 250ms;
+  display: inline-block;
+}
+a.socialLeft:hover {
+  transform: translateY(-2px);
 }
