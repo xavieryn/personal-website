@@ -39,19 +39,23 @@ a.socialLeft:hover {
 .navBarContainer {
   display: flex;
   color: green;
-  margin: 0 5%;
+  margin: 0.5rem 0.2rem;
+  background-color: #C3D1CE;
+  /* fix small backrounds image issue, issue with margin*/
 }
 
 .navBarRight {
   color: blue;
   display: flex;
-  padding: 10;
 }
 
 .listItem {
-  padding: 0 40px;
+  list-style-type: none;
+  margin: 0 0.2rem;
+
 }
 
 .ul {
   list-style-type: none;
 }
+
