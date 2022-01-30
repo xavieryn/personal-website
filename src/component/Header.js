@@ -1,5 +1,5 @@
 import { Box, Heading, Stack } from "@chakra-ui/react";
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import React from 'react';
 import SocialMedia from "./SocialMedia";
 

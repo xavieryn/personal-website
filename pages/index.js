@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Header from '../component/Header'
+import Header from '../src/component/Header'
+import Navbar from '../src/component/Navbar'
 import Work from './Work'
+import Projects from './Projects'
+import Other from './Other'
 
 export default function Home() {
   return (
@@ -13,8 +16,11 @@ export default function Home() {
       </Head>
 
       <main>
+        <Navbar/>
         <Header/>
         <Work/>
+        <Projects/>
+        <Other/>
 
       </main>
 

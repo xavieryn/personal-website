@@ -9,7 +9,7 @@ import {
 import { FaGithub, FaYoutube, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 import { Box, Stack, Heading, Link, Icon } from "@chakra-ui/react";
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 
 
 export default function SocialMedia() {
