@@ -9,7 +9,7 @@ export default function Header() {
         <Box
             w="100%"
             h="100vh"
-            backgroundImage="/background-cover.svg"
+            backgroundImage="/layered-waves-haikei.svg"
             backgroundSize="cover"
             color="white"
             paddingLeft="calc(100vw/1.8)"

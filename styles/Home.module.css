@@ -38,13 +38,12 @@ a.socialLeft:hover {
 /* NavBar */
 .navBarContainer {
   display: flex;
-  color: green;
-  background-color: #C3D1CE;
-  padding: 0.5rem 0.2rem;
+  padding: 1rem 0.4rem;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
 }
 
 .navbarName {
-  padding-right: .5rem;
+  padding-right: 0.5rem;
   /* figure out why padding is not working */
 }
 .navbarTitle {
@@ -52,17 +51,14 @@ a.socialLeft:hover {
 }
 
 .navBarRight {
-  color: blue;
   display: flex;
 }
 
 .listItem {
   list-style-type: none;
   margin: 0 0.2rem;
-
 }
 
 .ul {
   list-style-type: none;
 }
-
