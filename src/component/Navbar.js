@@ -7,8 +7,12 @@ export default function Navbar() {
     console.log('pp')
     return (
         <Box className={styles.navBarContainer}>
-            <Box>
-                <Heading fontSize={[".75rem", "1.2rem"]} as="h2">Xavier Nishikawa</Heading>
+            <Box className={styles.navbarTitle}>
+
+                <Box  className={styles.navbarName}>
+                    <Link href={'/'}><Heading fontSize={[".75rem", "1.2rem"]} as="h2">Xavier Nishikawa </Heading> </Link>
+                </Box>
+                <Heading fontSize={[".75rem", "1.2rem"]} as="h2"> | </Heading>
             </Box>
             <Box className={styles.navBarRight}>
                 {navLinks.map((link, index) => {

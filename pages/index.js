@@ -16,8 +16,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <Navbar/>
         <Header/>
+        <Navbar/>
         <Work/>
         <Projects/>
         <Other/>

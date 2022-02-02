@@ -3,7 +3,7 @@ import React from 'react';
 
 const Projects = () => {
   return(
-    <Box>
+    <Box id='Projects'>
          <Heading fontSize={['1rem','2rem','3rem']} as='h2'>Projects</Heading>
     </Box>)
 };

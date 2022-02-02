@@ -39,9 +39,16 @@ a.socialLeft:hover {
 .navBarContainer {
   display: flex;
   color: green;
-  margin: 0.5rem 0.2rem;
   background-color: #C3D1CE;
-  /* fix small backrounds image issue, issue with margin*/
+  padding: 0.5rem 0.2rem;
+}
+
+.navbarName {
+  padding-right: .5rem;
+  /* figure out why padding is not working */
+}
+.navbarTitle {
+  display: flex;
 }
 
 .navBarRight {
