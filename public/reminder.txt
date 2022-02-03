@@ -1,0 +1,1 @@
+have image set at a certain max width and max height of screen. and make image fit to that, so that each time a user clicks on an image, it won't change the screen size. 
