@@ -22,11 +22,11 @@ export default function Header() {
              fontWeight={450}
              fontSize={[ "0.75rem", "1.25rem"]}
             >High school student</Heading>
-            <Heading as="h2" 
+            {/* <Heading as="h2" 
               fontWeight={450} 
               fontSize={[ "0.75rem", "1.25rem"]}
             >Developer</Heading>
-            
+             */}
             <SocialMedia className={styles.socialMedia}/>
 
             

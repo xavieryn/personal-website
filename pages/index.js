@@ -6,7 +6,7 @@ import Work from './Work'
 import Projects from './Projects'
 import Other from './Other'
 
-export default function Home() {
+export default function Home( { posts }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -19,7 +19,7 @@ export default function Home() {
         <Header/>
         <Navbar/>
         <Work/>
-        <Projects/>
+        <Projects props={posts}/>
         <Other/>
 
       </main>
@@ -27,4 +27,15 @@ export default function Home() {
       
     </div>
   )
+}
+
+export const getStaticProps = async () => {
+  const posts = await fetch("https://berowra.xavier.deta.app/api/collection/t7tp38g89mkw?content").then(r => r.json());
+  return {
+    props: {
+      //pp: 'Next.js is making me cry'
+      posts
+    },
+    revalidate: 10
+  }
 }
