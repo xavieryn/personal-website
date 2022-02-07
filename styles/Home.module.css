@@ -62,3 +62,15 @@ a.socialLeft:hover {
 .ul {
   list-style-type: none;
 }
+
+/* project image container*/
+.ImageContainer {
+  display: flex;
+}
+
+.ProjectCard {
+  display: flex;
+  max-width: 50%;
+  flex-direction: row;
+  align-items: center;
+}
