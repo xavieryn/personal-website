@@ -1,31 +1,30 @@
 import { Box, Heading, Image, Text, Link} from '@chakra-ui/react';
 import React from 'react';
 import styles from '../../styles/Home.module.css'
-import nextLink from 'next/link';
+import NextLink from 'next/link';
 
 
 const ProjectCard = ( { props }) => {
-    
-    console.log(props)
-    console.log(props.items)
-    console.log(props.items.imagegallery)
+    console.log(props.items);
+    console.log(props.items.map((item) => transformContent(item))); 
     return (
-        <Box className={styles.ProjectCard}>
+        <Box className={styles.ProjectCardContainer}>
             {/* {props.items.map((project) => { */}
             {props.items.map((item) => transformContent(item)).map(project => {
                 
                 return (
                     // card 
-                    <Box key={project.key} > 
+                    <Box key={project.key} className={styles.ProjectCard} > 
                         <Heading>
                             {project.title}
                         </Heading>
-                        <nextLink>
+                        <NextLink href={'youtube.com'}>
                             <Link>
-                                <Image src={ "https://berowra.xavier.deta.app" + "/file/" + project.content.ImageGallery.value[0]}  w={'100%'}/> 
+                                {/* <Image src={ "https://berowra.xavier.deta.app" + "/file/" + project.content.imagegallery.value[0]}/>  */}
+                                <Text>pp</Text>
                             </Link>
-                        </nextLink>
-                        {/* <Text>{project.content.Body.value}</Text> */}
+                        </NextLink>
+                        {/* <Text>{project.content.Body.value}</Text>   */}
                     </Box>
                 )
             })

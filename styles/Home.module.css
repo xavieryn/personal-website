@@ -64,13 +64,12 @@ a.socialLeft:hover {
 }
 
 /* project image container*/
-.ImageContainer {
+.ProjectCardContainer {
   display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .ProjectCard {
-  display: flex;
   max-width: 50%;
-  flex-direction: row;
-  align-items: center;
 }
