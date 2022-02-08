@@ -22,8 +22,6 @@ const ProjectCard = ( { props }) => {
                                 <Image 
                                 src={ "https://berowra.xavier.deta.app" + "/file/" + project.content.ImageGallery.value[0]} 
                                 alt='Project Photo'
-                               
-
                                 /> 
                             </Link>
                         </NextLink>
