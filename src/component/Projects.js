@@ -1,6 +1,6 @@
 import { Box, Heading, Text } from '@chakra-ui/layout';
 import React from 'react';
-import ProjectCard from '../src/component/ProjectCard';
+import ProjectCard from './ProjectCard';
 
 
 const Projects = ({ props }) => {

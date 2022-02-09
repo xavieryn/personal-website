@@ -15,20 +15,25 @@ export default function Header() {
             paddingLeft="calc(100vw/1.8)"
             paddingTop="calc(100vh / 2.2)"
         >
-            <Heading fontSize={["2rem", "3rem", "4rem", "5rem"]} as="h1">Xavier<br/>Nishikawa</Heading>
-            <hr className={styles.hrHeader}/>
-            <Heading
-             as="h2" 
-             fontWeight={450}
-             fontSize={[ "0.75rem", "1.25rem"]}
-            >High school student</Heading>
-            {/* <Heading as="h2" 
-              fontWeight={450} 
-              fontSize={[ "0.75rem", "1.25rem"]}
-            >Developer</Heading>
-             */}
-            <SocialMedia className={styles.socialMedia}/>
-
+            <Box
+             backgroundColor='#001220'
+             padding='3%'
+             borderRadius='10px'
+             >
+                <Heading fontSize={["2rem", "3rem", "4rem", "5rem"]} as="h1">Xavier<br/>Nishikawa</Heading>
+                <hr className={styles.hrHeader}/>
+                <Heading
+                as="h2" 
+                fontWeight={450}
+                fontSize={[ "0.75rem", "1.25rem"]}
+                >High school student</Heading>
+                {/* <Heading as="h2" 
+                fontWeight={450} 
+                fontSize={[ "0.75rem", "1.25rem"]}
+                >Developer</Heading>
+                */}
+                <SocialMedia className={styles.socialMedia}/>
+            </Box>
             
         </Box>
         

@@ -13,33 +13,35 @@ const ProjectCard = ( { props }) => {
         <Box
             display="flex"
             flexWrap="wrap"
+            flexDirection='row'
             gap="1rem"
             justifyContent='center'
+            w='100%'
+                     
         >
             {/* {props.items.map((project) => { */}
             {props.items.map((item) => transformContent(item)).map(project => {
                 
                 return (
                     // card 
-                    <Box
-                        key={project.key}
-                        w="600px"
-                        padding={'0% 2%'}
-                    > 
-                        
-                        <NextLink href={'youtube.com'}>
-                            <Link>
-                                <Box 
-                                style = {{ backgroundImage: `url(${"https://berowra.xavier.deta.app" + "/file/" + project.content.ImageGallery.value[0]})` }}
-                                // style={{ backgroundImage: urlObjectKeys("https://berowra.xavier.deta.app" + "/file/" + project.content.ImageGallery.value[0]) }} 
-                                alt='Project Photo'
-                                >
-
-                                </Box>
-                               
-                            </Link>
-                        </NextLink>
-                    </Box>
+                    <NextLink href={'youtube.com'} key={project.key} >
+                        <Link>
+                            <Box
+                                style = {{ backgroundImage:`url(${"https://berowra.xavier.deta.app" + "/file/" + project.content.ImageGallery.value[0]})`}}
+                                h="40vh"
+                                display='flex'
+                                w='800px'
+                                maxW='100vw'
+                                backgroundSize='cover'
+                                backgroundPosition='center'
+                                backgroundRepeat='no-repeat'
+                                
+                            > 
+                                
+                            
+                            </Box>
+                        </Link>
+                    </NextLink>
                 )
             })
             } 
