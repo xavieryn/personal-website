@@ -3,26 +3,40 @@ import React from 'react';
 import styles from '../../styles/Home.module.css'
 import NextLink from 'next/link';
 import NextImage from 'next/image'
+import { urlObjectKeys } from 'next/dist/shared/lib/utils';
 
 
 const ProjectCard = ( { props }) => {
     // console.log(props.items);
     // console.log(props.items.map((item) => transformContent(item))); 
     return (
-        <Box className={styles.ProjectCardContainer}>
+        <Box
+            display="flex"
+            flexWrap="wrap"
+            gap="1rem"
+            justifyContent='center'
+        >
             {/* {props.items.map((project) => { */}
             {props.items.map((item) => transformContent(item)).map(project => {
                 
                 return (
                     // card 
-                    <Box key={project.key}  className={styles.ProjectCard} > 
+                    <Box
+                        key={project.key}
+                        w="600px"
+                        padding={'0% 2%'}
+                    > 
                         
                         <NextLink href={'youtube.com'}>
                             <Link>
-                                <Image 
-                                src={ "https://berowra.xavier.deta.app" + "/file/" + project.content.ImageGallery.value[0]} 
+                                <Box 
+                                style = {{ backgroundImage: `url(${"https://berowra.xavier.deta.app" + "/file/" + project.content.ImageGallery.value[0]})` }}
+                                // style={{ backgroundImage: urlObjectKeys("https://berowra.xavier.deta.app" + "/file/" + project.content.ImageGallery.value[0]) }} 
                                 alt='Project Photo'
-                                /> 
+                                >
+
+                                </Box>
+                               
                             </Link>
                         </NextLink>
                     </Box>
