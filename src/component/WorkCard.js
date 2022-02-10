@@ -7,9 +7,9 @@ import { urlObjectKeys } from 'next/dist/shared/lib/utils';
 import Head from 'next/head';
 
 
-const ProjectCard = ( { props }) => {
+const WorkCard = ( { props }) => {
     // console.log(props.items);
-    // console.log(props.items.map((item) => transformContent(item))); 
+    console.log(props.items.map((item) => transformContent(item))); 
     return (
         <Box
             display="flex"
@@ -22,13 +22,13 @@ const ProjectCard = ( { props }) => {
             padding='10px'                     
         >
             {/* {props.items.map((project) => { */}
-            {props.items.map((item) => transformContent(item)).map(project => {
+            {props.items.map((item) => transformContent(item)).map(work => {
                 
                 return (
                     // card 
                    
                     <Box
-                        style = {{ backgroundImage:`url(${"https://berowra.xavier.deta.app" + "/file/" + project.content.ImageGallery.value[0]})`,
+                        style = {{ backgroundImage:`url(${"https://berowra.xavier.deta.app" + "/file/" + work.content.ImageGallery.value[0]})`,
                             aspectRatio:'16/11'
                         }}
                         h="auto"   
@@ -62,10 +62,10 @@ const ProjectCard = ( { props }) => {
                                     <Heading 
                                     textAlign='center'
                                      >
-                                    {project.content.Title.value}
+                                    {work.content.Title.value}
                                     </Heading>
                                     <Text
-                                    textAlign='center'> {project.content.TagLine.value}
+                                    textAlign='center'> {work.content.TagLine.value}
                                     </Text>
                                         
                                 </Box>
@@ -80,7 +80,7 @@ const ProjectCard = ( { props }) => {
     )
 };
 
-export default ProjectCard;
+export default WorkCard;
 function transformContent(content) {
     return {
     //instead of variable names being weird numbers, changes variable name to actual title value

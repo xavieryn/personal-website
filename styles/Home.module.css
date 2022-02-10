@@ -85,3 +85,8 @@ a.socialLeft:hover {
     padding: 2.5% 2.5%;
   }
 } */
+
+@font-face {
+  font-family: 'Sans Serif';
+  src: url('../src/fonts/thin.woff2') format('woff2');
+}

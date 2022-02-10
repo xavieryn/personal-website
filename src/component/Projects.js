@@ -1,12 +1,13 @@
 import { Box, Heading, Text } from '@chakra-ui/layout';
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import styles from '../../styles/Home.module.css'
 
 
 const Projects = ({ props }) => {
   return(  
-    <Box id='Projects'>
-         <Heading fontSize={['1rem','2rem','3rem']} as='h2'>Projects</Heading>
+    <Box id='Projects' >
+         <Heading fontSize={['1rem','2rem','3rem']} as='h2' margin='0.5% 1.5%'>Projects</Heading>
          <ProjectCard props={props}/>
     </Box>
     )
