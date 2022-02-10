@@ -4,6 +4,7 @@ import styles from '../../styles/Home.module.css'
 import NextLink from 'next/link';
 import NextImage from 'next/image'
 import { urlObjectKeys } from 'next/dist/shared/lib/utils';
+import Head from 'next/head';
 
 
 const ProjectCard = ( { props }) => {
@@ -26,7 +27,7 @@ const ProjectCard = ( { props }) => {
                 
                 return (
                     // card 
-                    <NextLink href={'youtube.com'} key={project.key} style={{ textDecoration:'none'}}>
+                    <NextLink href={'youtube.com'} key={project.key} style={{ textDecoration: 'none' }}>
                     
                         <Link maxW='100%'  textDecoration='none'>
                             <Box
@@ -36,14 +37,16 @@ const ProjectCard = ( { props }) => {
                                 h="auto"   
                                 // maxH='50vh'
                                 display='flex'
-                                w='600px'
+                                w='400px'
                                 maxW='100%'
                                 backgroundSize='cover'
                                 backgroundPosition='center'
                                 backgroundRepeat='no-repeat'
+                                
 
                                 
                             > 
+                                
                                 <Box
                                 w='100%'
                                 h='100%'
@@ -51,15 +54,18 @@ const ProjectCard = ( { props }) => {
                                 opacity='0'
                                 transition='opacity 0.2s ease-out'
                                 _hover={{ 
-                                    opacity: 1,
-                                    
+                                    opacity: 1,  
                                 }}
+                                
+                                
                                 >
-                                    <Text 
+                                    <Heading 
                                     textAlign='center'
                                     >
                                         {project.content.Title.value}
-                                    </Text>
+                                    </Heading>
+                                    <Text
+                                    textAlign='center'> {project.content.TagLine.value}</Text>
                                 </Box>
                             
                             </Box>
