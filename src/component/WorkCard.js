@@ -1,11 +1,6 @@
 import { Box, Heading, Image, Text, Link, AspectRatio} from '@chakra-ui/react';
 import React from 'react';
-import styles from '../../styles/Home.module.css'
 import NextLink from 'next/link';
-import NextImage from 'next/image'
-import { urlObjectKeys } from 'next/dist/shared/lib/utils';
-import Head from 'next/head';
-
 
 const WorkCard = ( { props }) => {
     // console.log(props.items);

@@ -1,8 +1,6 @@
 import { Box, Heading, Text } from '@chakra-ui/layout';
 import React from 'react';
 import WorkCard from './WorkCard';
-import styles from '../../styles/Home.module.css'
-
 
 const Work = ({ props }) => {
   return(  

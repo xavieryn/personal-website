@@ -1,14 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faYoutube,
-    faGithub,
-    faLinkedin,
-    faInstagram,
-} from '@fortawesome/free-brands-svg-icons'
 import { FaGithub, FaYoutube, FaLinkedin, FaInstagram } from 'react-icons/fa';
-
-import { Box, Stack, Heading, Link, Icon } from "@chakra-ui/react";
+import { Box, Link, Icon } from "@chakra-ui/react";
 import styles from '../../styles/Home.module.css'
 
 

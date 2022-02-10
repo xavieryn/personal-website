@@ -7,13 +7,16 @@ export default function Header() {
     
     return (
         <Box
+            display='flex'
             w="100%"
             h="100vh"
             backgroundImage="/layered-waves-haikei.svg"
             backgroundSize="cover"
             color="white"
-            paddingLeft="calc(100vw/1.8)"
-            paddingTop="calc(100vh / 2.2)"
+            paddingTop="calc(100vw/10)"
+            paddingRight="calc(100vh / 10)"
+            alignItems='center'
+            justifyContent='flex-end'
         >
             <Box
              backgroundColor='#001220'
