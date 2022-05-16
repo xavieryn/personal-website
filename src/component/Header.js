@@ -23,12 +23,12 @@ export default function Header() {
              padding='3%'
              borderRadius='10px'
              >
-                <Heading fontSize={["2rem", "3rem", "4rem", "5rem"]} as="h1">Xavier<br/>Nishikawa</Heading>
+                <Heading fontSize={["2rem", "3rem", "4rem", "5rem", "7rem"]} as="h1">Xavier<br/>Nishikawa</Heading>
                 <hr className={styles.hrHeader}/>
                 <Heading
                 as="h2" 
                 fontWeight={450}
-                fontSize={[ "0.75rem", "1.25rem"]}
+                fontSize={[ "0.75rem", "1.25rem", "1.75rem"]}
                 >High school student</Heading>
                 {/* <Heading as="h2" 
                 fontWeight={450} 
