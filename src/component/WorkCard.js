@@ -1,10 +1,12 @@
-import { Box, Heading, Image, Text, Link, AspectRatio} from '@chakra-ui/react';
+import { Box, Heading, Image, Text, Link, AspectRatio, Center, Icon} from '@chakra-ui/react';
+import GitHubLink from './GitHubLink';
 import React from 'react';
 import NextLink from 'next/link';
 
-const WorkCard = ( { props }) => {
+const WorkCard = ( { props } ) => {
     // console.log(props.items);
-    console.log(props.items.map((item) => transformContent(item))); 
+    console.log(props.items.map((item) => transformContent(item)));
+    
     return (
         <Box
             display="flex"
@@ -48,6 +50,7 @@ const WorkCard = ( { props }) => {
                                 bgColor='white'
                                 opacity='0'
                                 transition='opacity 0.2s ease-out'
+                                alignItems='center'
                                 _hover={{ 
                                     opacity: 1, 
                                     
@@ -62,7 +65,7 @@ const WorkCard = ( { props }) => {
                                     <Text
                                     textAlign='center'> {work.content.TagLine.value}
                                     </Text>
-                                        
+                                    <GitHubLink work={work}/>
                                 </Box>
                             </Link>
                         </NextLink>

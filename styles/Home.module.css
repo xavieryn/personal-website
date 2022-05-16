@@ -1,6 +1,3 @@
-.container {
-  display: flex;
-}
 .main {
   display: flex;
 }
@@ -38,7 +35,7 @@ a.socialLeft:hover {
 /* NavBar */
 .navBarContainer {
   display: flex;
-  padding: 1rem 0.4rem;
+  padding: 1rem 2rem;
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
 }
 
@@ -77,16 +74,8 @@ a.socialLeft:hover {
   flex: 50%;
   max-width: 50%;
 }
-/* @media screen and (max-width: 900px) {
-  .ProjectCard {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-    padding: 2.5% 2.5%;
-  }
-} */
 
 @font-face {
-  font-family: 'Sans Serif';
-  src: url('../src/fonts/thin.woff2') format('woff2');
+  font-family: "Sans Serif";
+  src: url("../src/fonts/thin.woff2") format("woff2");
 }
