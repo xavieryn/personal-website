@@ -10,8 +10,8 @@ export default function Header() {
             display='flex'
             w="100%"
             h="100vh"
-            backgroundImage="/layered-waves-haikei.svg"
-            backgroundSize="cover"
+            backgroundImage="/testNight.gif"
+            backgroundSize="cover"   
             color="white"
             paddingTop="calc(100vw/10)"
             paddingRight="calc(100vh / 10)"
