@@ -4,24 +4,31 @@ import React from 'react';
 import SocialMedia from "./SocialMedia";
 
 export default function Header() {
-    
+    const time = new Date();
+    let backgroundGif = "pp";
+    if (time.getHours() > 19 ||  time.getHours() < 6){
+        backgroundGif= "/testNight.gif";
+    }
+    else { backgroundGif = "/dayClouds3.gif"}
+
     return (
         <Box
             display='flex'
             w="100%"
             h="100vh"
-            backgroundImage="/testNight.gif"
+            sx = {{ backgroundImage: backgroundGif }}
             backgroundSize="cover"   
             color="white"
-            paddingTop="calc(100vw/10)"
-            paddingRight="calc(100vh / 10)"
+            // paddingTop="calc(100vw/10)"
+            // paddingRight="calc(100vh / 10)"
             alignItems='center'
-            justifyContent='flex-end'
+            justifyContent='center'
+            //justifyContent='flex-end'
         >
             <Box
              backgroundColor='#001220'
-             padding='3%'
-             borderRadius='10px'
+             padding='6%'
+             borderRadius='40px'
              >
                 <Heading fontSize={["2rem", "3rem", "4rem", "5rem", "7rem"]} as="h1">Xavier<br/>Nishikawa</Heading>
                 <hr className={styles.hrHeader}/>

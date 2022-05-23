@@ -5,7 +5,8 @@ import React from 'react';
 const GitHubLink = ( {work} ) => {
     if (work.content.GitHub.value) {
         return (
-            <Center>
+            <Center
+            padding='30'>
                 <Link                                   
                     href={work.content.GitHub.value}> 
                         <Icon as={FaGithub} w={[3,6,8]} h={[3,6,8]}/>
