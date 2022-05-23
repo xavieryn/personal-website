@@ -5,7 +5,7 @@ import NextLink from 'next/link';
 
 const WorkCard = ( { props } ) => {
     // console.log(props.items);
-    console.log(props.items.map((item) => transformContent(item)));
+    // console.log(props.items.map((item) => transformContent(item)));
     
     return (
         <Box
@@ -16,7 +16,10 @@ const WorkCard = ( { props } ) => {
             //justifyContent='center'
             // w='calc(100% - 20px)'
             w="100%"
-            padding='10px'                     
+            padding='10px'   
+            paddingLeft='2%'
+            paddingRight='2%'
+            justifyContent='center'                  
         >
             {/* {props.items.map((project) => { */}
             {props.items.map((item) => transformContent(item)).map(work => {
@@ -31,11 +34,13 @@ const WorkCard = ( { props } ) => {
                         h="auto"   
                         // maxH='50vh'
                         display='flex'
-                        w='400px'
+                        w='600px'
                         maxW='100%'
                         backgroundSize='cover'
                         backgroundPosition='center'
                         backgroundRepeat='no-repeat'
+                        borderRadius= '30'
+                        margin='0 4%'
                         > 
                         <NextLink
                             href={'yourmomshouse.com'}
