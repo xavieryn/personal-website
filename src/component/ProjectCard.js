@@ -16,7 +16,10 @@ const ProjectCard = ( { props }) => {
             //justifyContent='center'
             // w='calc(100% - 20px)'
             w="100%"
-            padding='10px'                     
+            padding='10px'  
+            justifyContent='center'
+            paddingLeft='2%'
+            paddingRight='2%'                   
         >
             {/* {props.items.map((project) => { */}
             {props.items.map((item) => transformContent(item)).map(project => {
@@ -31,11 +34,13 @@ const ProjectCard = ( { props }) => {
                         h="auto"   
                         // maxH='50vh'
                         display='flex'
-                        w='400px'
+                        w='600px'
                         maxW='100%'
                         backgroundSize='cover'
                         backgroundPosition='center'
                         backgroundRepeat='no-repeat'
+                        borderRadius='30'
+                        margin='0 4%'
                         > 
                         <NextLink
                             href={'yourmomshouse.com'}
