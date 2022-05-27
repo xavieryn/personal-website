@@ -2,11 +2,10 @@ import { Box, Heading, Image, Text, Link, AspectRatio} from '@chakra-ui/react';
 import React from 'react';
 import NextLink from 'next/link';
 
-
+const ROUTE_POST_ID = "posts/[id]"
 
 const ProjectCard = ( { props }) => {
-    // console.log(props.items);
-    // console.log(props.items.map((item) => transformContent(item))); 
+    
     return (
         <Box
             display="flex"
@@ -41,9 +40,10 @@ const ProjectCard = ( { props }) => {
                         backgroundRepeat='no-repeat'
                         borderRadius='30'
                         margin='0 4%'
+                        sx={{ key: project.content.Title.value }}
                         > 
                         <NextLink
-                            href={'yourmomshouse.com'}
+                            href={ '/projects/' + project.content.Title.value}
                             styles={{ textDecoration:'none'
                             }}>
                             <Link w='100%' h='100%' textDecoration='none' _hover= {{
