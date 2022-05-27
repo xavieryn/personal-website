@@ -76,6 +76,6 @@ a.socialLeft:hover {
 }
 
 @font-face {
-  font-family: "Sans Serif";
-  src: url("../src/fonts/thin.woff2") format("woff2");
+  font-family: 'Sans Serif';
+  src: url('../src/fonts/thin.woff2') format('woff2');
 }
