@@ -43,7 +43,8 @@ const ProjectCard = ( { props }) => {
                         sx={{ key: project.content.Title.value }}
                         > 
                         <NextLink
-                            href={ '/projects/' + project.content.Title.value}
+                            //href={ '/projects/' + project.content.Title.value}
+                            href={`/projects/${project.content.Title.value}`}
                             styles={{ textDecoration:'none'
                             }}>
                             <Link w='100%' h='100%' textDecoration='none' _hover= {{

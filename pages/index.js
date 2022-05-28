@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from '../src/component/Header'
 import Navbar from '../src/component/Navbar'
 import Work from '../src/component/Work'
-import Projects from '../src/component/Projects'
+import Projects from '../src/component/project/Projects'
 import Other from '../src/component/Other'
 
 export default function Home( { work, projects, other }) {
