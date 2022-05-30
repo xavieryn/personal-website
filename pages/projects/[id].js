@@ -3,18 +3,14 @@ import { Box } from "@chakra-ui/react";
 export default function ProjectPage( {project} ){
     const transformedProject = transformContent(project);
     let result = Object.keys(transformedProject).map((key) => [Number(key), transformedProject[key]]);
-
-    console.log(result[1][1].Skills.value);
     return (
     <Box>
         
         <Box>
           {result[1][1].Skills.value}
 
-          penis
+          
         </Box>
-        
-
     </Box>
   )
 }
@@ -42,9 +38,9 @@ export const getStaticPaths = async () => {
         fallback: false,
     };
 }
-export const getStaticProps = async ( {id} ) => {
-  console.log(id);
-  const project = await fetch("https://berowra.xavier.deta.app/api/content/" + id).then(r => r.json());
+export const getStaticProps = async ( context ) => {
+  console.log(context.params.id);
+  const project = await fetch("https://berowra.xavier.deta.app/api/content/" + context.params.id).then(r => r.json());
   console.log(project);
   return {
     //project

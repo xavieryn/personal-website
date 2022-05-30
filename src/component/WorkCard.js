@@ -4,9 +4,7 @@ import React from 'react';
 import NextLink from 'next/link';
 
 const WorkCard = ( { props } ) => {
-    // console.log(props.items);
-    // console.log(props.items.map((item) => transformContent(item)));
-    
+   
     return (
         <Box
             display="flex"
