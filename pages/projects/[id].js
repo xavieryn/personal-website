@@ -1,20 +1,12 @@
 import { Box } from "@chakra-ui/react";
 
-export default function ProjectPage( { project} ){
-    let result = Object.keys(transformContent(project)).map((key) => [Number(key), project[key]]);
+export default function ProjectPage( {project} ){
+    const transformedProject = transformContent(project);
+    let result = Object.keys(transformedProject).map((key) => [Number(key), transformedProject[key]]);
 
-    // console.log(Array.isArray(project));
-    // console.log(Array.isArray(Object.keys(project)));
-    console.log(result[1]);
-    console.log("spaceeeeeeeeeeeeeeeeeeeeeeeeeee");
-    console.log(result[1][1]);
-    
     console.log(result[1][1].Skills.value);
     return (
     <Box>
-
-
-
         
         <Box>
           {result[1][1].Skills.value}
@@ -22,9 +14,6 @@ export default function ProjectPage( { project} ){
           penis
         </Box>
         
-      
-    
-     
 
     </Box>
   )
@@ -41,12 +30,10 @@ function transformContent(content) {
 
 export const getStaticPaths = async () => {
     const projects = await fetch("https://berowra.xavier.deta.app/api/collection/t7tp38g89mkw?content").then(r => r.json());
-    //console.log("we in????")
     const paths = projects.items.map((item) => transformContent(item)).map(project => {
-      //console.log(project.content.Title.value); 
       return {
       params: {
-        id: project.content.Title.value,
+        id: project.key,
       },
     };
   });
@@ -55,9 +42,10 @@ export const getStaticPaths = async () => {
         fallback: false,
     };
 }
-export const getStaticProps = async () => {
-  const project = await fetch("https://berowra.xavier.deta.app/api/content/p9w96ls7d6s9").then(r => r.json());
-  //console.log(projects);
+export const getStaticProps = async ( {id} ) => {
+  console.log(id);
+  const project = await fetch("https://berowra.xavier.deta.app/api/content/" + id).then(r => r.json());
+  console.log(project);
   return {
     //project
     props: { project }

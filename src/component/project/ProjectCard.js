@@ -4,7 +4,7 @@ import NextLink from 'next/link';
 
 
 const ProjectCard = ( { props }) => {
-    
+    console.log(props);
     return (
         <Box
             display="flex"
@@ -39,7 +39,7 @@ const ProjectCard = ( { props }) => {
                         backgroundRepeat='no-repeat'
                         borderRadius='30'
                         margin='0 4%'
-                        key={project.content.Title.value}
+                        key={project.key}
                         > 
                         <NextLink
                             //href={ '/projects/' + project.content.Title.value}
@@ -68,6 +68,7 @@ const ProjectCard = ( { props }) => {
                                     </Heading>
                                     <Text
                                     textAlign='center'> {project.content.TagLine.value}
+                                    
                                     </Text>
                                         
                                 </Box>
