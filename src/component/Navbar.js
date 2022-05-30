@@ -17,7 +17,7 @@ export default function Navbar() {
             <Box className={styles.navBarRight}>
                 {navLinks.map((link, index) => {
                 return (
-                    <UnorderedList className={styles.ul}>
+                    <UnorderedList className={styles.ul} key={index}>
                        <NextLink href={link.path} passHref>
                            <Link>
                                 <ListItem key={index} className={styles.listItem}>

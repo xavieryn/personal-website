@@ -41,6 +41,7 @@ const WorkCard = ( { props } ) => {
                         backgroundRepeat='no-repeat'
                         borderRadius= '30'
                         margin='0 4%'
+                        key={work.content.Title.value}
                         > 
                         <NextLink
                             href={'yourmomshouse.com'}

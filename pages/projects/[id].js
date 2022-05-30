@@ -1,24 +1,30 @@
 import { Box } from "@chakra-ui/react";
 
 export default function ProjectPage( { project} ){
-    console.log(Array.isArray(project));
-    console.log(Array.isArray(Object.keys(project)));
+    let result = Object.keys(transformContent(project)).map((key) => [Number(key), project[key]]);
+
+    // console.log(Array.isArray(project));
+    // console.log(Array.isArray(Object.keys(project)));
+    console.log(result[1]);
+    console.log("spaceeeeeeeeeeeeeeeeeeeeeeeeeee");
+    console.log(result[1][1]);
+    
+    console.log(result[1][1].Skills.value);
     return (
     <Box>
-       {/* {project.map((item) => transformContent(item)).map(project => { */}
-       {Object.keys(transformContent(project)).map((key) => [Number(key), project[key]]){
 
 
 
-        return(
+        
         <Box>
-          {project.content.Title.value}
+          {result[1][1].Skills.value}
+
           penis
         </Box>
-        )
-      })
+        
+      
     
-    } 
+     
 
     </Box>
   )

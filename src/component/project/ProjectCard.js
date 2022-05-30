@@ -2,7 +2,6 @@ import { Box, Heading, Image, Text, Link, AspectRatio} from '@chakra-ui/react';
 import React from 'react';
 import NextLink from 'next/link';
 
-const ROUTE_POST_ID = "posts/[id]"
 
 const ProjectCard = ( { props }) => {
     
@@ -40,7 +39,7 @@ const ProjectCard = ( { props }) => {
                         backgroundRepeat='no-repeat'
                         borderRadius='30'
                         margin='0 4%'
-                        sx={{ key: project.content.Title.value }}
+                        key={project.content.Title.value}
                         > 
                         <NextLink
                             //href={ '/projects/' + project.content.Title.value}
