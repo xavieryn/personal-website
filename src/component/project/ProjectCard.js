@@ -1,4 +1,4 @@
-import { Box, Heading, Image, Text, Link, AspectRatio} from '@chakra-ui/react';
+import { Box, Heading, Text, Link, AspectRatio} from '@chakra-ui/react';
 import React from 'react';
 import NextLink from 'next/link';
 
@@ -20,7 +20,7 @@ const ProjectCard = ( { props }) => {
         >
             {/* {props.items.map((project) => { */}
             {props.items.map((item) => transformContent(item)).map(project => {
-                
+                // {console.log(project.content.ImageGallery.value[0])}
                 return (
                     // card 
                    
@@ -67,7 +67,7 @@ const ProjectCard = ( { props }) => {
                                     </Heading>
                                     <Text
                                     textAlign='center'> {project.content.TagLine.value}
-                                    {project.key}
+                                    
                                     </Text>
                                         
                                 </Box>

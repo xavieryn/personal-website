@@ -1,16 +1,19 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Heading, Image, Text } from "@chakra-ui/react";
 
 export default function ProjectPage( {project} ){
     const transformedProject = transformContent(project);
     let result = Object.keys(transformedProject).map((key) => [Number(key), transformedProject[key]]);
+    console.log(result[1][1].ImageGallery.value[0]);
     return (
     <Box>
-        
         <Box>
-          {result[1][1].Skills.value}
-
-          
+        <Heading> {result[1][1].Title.value}</Heading>
+        <Heading> {result[1][1].TagLine.value} </Heading>
+        <Text>  {result[1][1].Skills.value}  </Text>
         </Box>
+        {/* <Image src={`url(${"https://berowra.xavier.deta.app" + "/file/" + result[1][1].ImageGallery.value[0]})`}/> */}
+        {/* the url function is being funky because my actualy link works*/}
+        <Image src='https://berowra.xavier.deta.app/file/2022-02-0518:12:42.336374+00:00cs50_ide.PNG'/> 
     </Box>
   )
 }
@@ -39,9 +42,8 @@ export const getStaticPaths = async () => {
     };
 }
 export const getStaticProps = async ( context ) => {
-  console.log(context.params.id);
+  //console.log(context.params.id);
   const project = await fetch("https://berowra.xavier.deta.app/api/content/" + context.params.id).then(r => r.json());
-  console.log(project);
   return {
     //project
     props: { project }
