@@ -5,15 +5,24 @@ export default function ProjectPage( {project} ){
     let result = Object.keys(transformedProject).map((key) => [Number(key), transformedProject[key]]);
     console.log(result[1][1].ImageGallery.value[0]);
     return (
-    <Box>
-        <Box>
-        <Heading> {result[1][1].Title.value}</Heading>
-        <Heading> {result[1][1].TagLine.value} </Heading>
-        <Text>  {result[1][1].Skills.value}  </Text>
+    <Box 
+    padding='5% 20%'>
+        <Box >
+          <Heading fontSize={[ "2rem", "3rem", "4rem"]}> {result[1][1].Title.value}</Heading>
+          <Heading fontSize={[ "1.5rem", "2rem", "2rem"]}> {result[1][1].TagLine.value} </Heading>
+          <Text fontSize={[ ".6rem", ".75rem", "1.25rem"]}>  {result[1][1].Skills.value}  </Text>
+          <hr/>
         </Box>
         {/* <Image src={`url(${"https://berowra.xavier.deta.app" + "/file/" + result[1][1].ImageGallery.value[0]})`}/> */}
         {/* the url function is being funky because my actualy link works*/}
-        <Image src='https://berowra.xavier.deta.app/file/2022-02-0518:12:42.336374+00:00cs50_ide.PNG'/> 
+        {/* style = {{ backgroundImage:`url(${"https://berowra.xavier.deta.app" + "/file/" + work.content.ImageGallery.value[0]})`, */}
+        <Box padding='3% 2%'>
+          <Image height='40%' src={ "https://berowra.xavier.deta.app" + "/file/" + result[1][1].ImageGallery.value[0]} alt="why no work?"/> 
+        
+          <Box padding='5% .5%'>
+            {result[1][1].Body.value}
+          </Box>
+        </Box>
     </Box>
   )
 }
