@@ -13,9 +13,7 @@ export default function ProjectPage( {project} ){
           <Text fontSize={[ ".6rem", ".75rem", "1.25rem"]}>  {result[1][1].Skills.value}  </Text>
           <hr/>
         </Box>
-        {/* <Image src={`url(${"https://berowra.xavier.deta.app" + "/file/" + result[1][1].ImageGallery.value[0]})`}/> */}
-        {/* the url function is being funky because my actualy link works*/}
-        {/* style = {{ backgroundImage:`url(${"https://berowra.xavier.deta.app" + "/file/" + work.content.ImageGallery.value[0]})`, */}
+       
         <Box padding='3% 2%'>
           <Image height='40%' src={ "https://berowra.xavier.deta.app" + "/file/" + result[1][1].ImageGallery.value[0]} alt="why no work?"/> 
         
