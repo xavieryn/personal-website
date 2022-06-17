@@ -1,5 +1,5 @@
 import { Box, Heading, Text, Link } from '@chakra-ui/react';
-import GitHubLink from './GitHubLink';
+import GitHubLink from '../GitHubLink';
 import React from 'react';
 import NextLink from 'next/link';
 
@@ -42,7 +42,7 @@ const WorkCard = ( { props } ) => {
                         key={work.content.Title.value}
                         > 
                         <NextLink
-                            href={'yourmomshouse.com'}
+                            href={`/work/${work.key}`}
                             styles={{ textDecoration:'none'
                             }}>
                             <Link w='100%' h='100%' textDecoration='none' _hover= {{

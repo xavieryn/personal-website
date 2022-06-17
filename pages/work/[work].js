@@ -1,9 +1,8 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
 
-export default function ProjectPage( {project} ){
-    const transformedProject = transformContent(project);
-    let result = Object.keys(transformedProject).map((key) => [Number(key), transformedProject[key]]);
-    console.log(result[1][1].ImageGallery.value[0]);
+export default function WorkPage( {workContent} ){
+    const transformedProject = transformContent(workContent);
+    const result = Object.keys(transformedProject).map((key) => [Number(key), transformedProject[key]]);
     return (
     <Box 
     padding='5% 20%'>
@@ -35,11 +34,11 @@ function transformContent(content) {
 }
 
 export const getStaticPaths = async () => {
-    const projects = await fetch("https://berowra.xavier.deta.app/api/collection/t7tp38g89mkw?content").then(r => r.json());
-    const paths = projects.items.map((item) => transformContent(item)).map(project => {
+    const works = await fetch("https://berowra.xavier.deta.app/api/collection/qey11kq2wxox?content").then(r => r.json());
+    const paths = works.items.map((item) => transformContent(item)).map(work => {
       return {
       params: {
-        id: project.key,
+        work  : work.key,
       },
     };
   });
@@ -49,10 +48,10 @@ export const getStaticPaths = async () => {
     };
 }
 export const getStaticProps = async ( context ) => {
-  const project = await fetch("https://berowra.xavier.deta.app/api/content/" + context.params.id).then(r => r.json());
+  const workContent = await fetch("https://berowra.xavier.deta.app/api/content/" + context.params.work).then(r => r.json());
   return {
     //project
-    props: { project }
+    props: { workContent }
 
   }
 }

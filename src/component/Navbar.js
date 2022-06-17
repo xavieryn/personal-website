@@ -6,6 +6,7 @@ import styles from '../../styles/Home.module.css'
 
 export default function Navbar() {
     return (
+        <Box className={styles.navBarSticky}>
         <Box className={styles.navBarContainer}>
             <Box className={styles.navbarTitle}>
 
@@ -31,6 +32,7 @@ export default function Navbar() {
                 })}
             
             </Box>
+        </Box>
         </Box>
     );
 }

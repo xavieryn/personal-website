@@ -37,6 +37,14 @@ a.socialLeft:hover {
   display: flex;
   padding: 1rem 2rem;
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4);
+ 
+}
+
+.navBarSticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background-color: #9094EC;
 }
 
 .navbarName {
