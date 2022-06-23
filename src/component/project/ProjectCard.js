@@ -26,7 +26,7 @@ const ProjectCard = ( { props }) => {
                         h="auto"   
                         // maxH='50vh'
                         display='flex'
-                        w='600px'
+                        w='700px'
                         maxW='100%'
                         backgroundSize='cover'
                         backgroundPosition='center'
