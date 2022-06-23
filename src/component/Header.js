@@ -4,11 +4,15 @@ import React from 'react';
 import SocialMedia from "./SocialMedia";
 
 export default function Header() {
+    // check time of user
     const time = new Date();
     let backgroundGif = "pp";
+    // if night, show night GIF
     if (time.getHours() > 19 ||  time.getHours() < 6){
         backgroundGif= "/testNight.gif";
     }
+    // else, show day GIF
+    //else { backgroundGif = "/testNight.gif"}
     else { backgroundGif = "/dayClouds3.gif"}
 
     return (
@@ -19,11 +23,8 @@ export default function Header() {
             sx = {{ backgroundImage: backgroundGif }}
             backgroundSize="cover"   
             color="white"
-            // paddingTop="calc(100vw/10)"
-            // paddingRight="calc(100vh / 10)"
             alignItems='center'
             justifyContent='center'
-            //justifyContent='flex-end'
         >
             <Box
              backgroundColor='#001220'
@@ -37,11 +38,6 @@ export default function Header() {
                 fontWeight={450}
                 fontSize={[ "0.75rem", "1.25rem", "1.75rem"]}
                 >High school student</Heading>
-                {/* <Heading as="h2" 
-                fontWeight={450} 
-                fontSize={[ "0.75rem", "1.25rem"]}
-                >Developer</Heading>
-                */}
                 <SocialMedia className={styles.socialMedia}/>
             </Box>
             

@@ -10,20 +10,15 @@ const ProjectCard = ( { props }) => {
             flexWrap="wrap"
             flexDirection='row'
             gap="1rem"
-            //justifyContent='center'
-            // w='calc(100% - 20px)'
             w="100%"
             padding='10px'  
             justifyContent='center'
             paddingLeft='2%'
             paddingRight='2%'                   
         >
-            {/* {props.items.map((project) => { */}
             {props.items.map((item) => transformContent(item)).map(project => {
-                // {console.log(project.content.ImageGallery.value[0])}
                 return (
                     // card 
-                   
                     <Box
                         style = {{ backgroundImage:`url(${"https://berowra.xavier.deta.app" + "/file/" + project.content.ImageGallery.value[0]})`,
                             aspectRatio:'16/11'
@@ -41,7 +36,6 @@ const ProjectCard = ( { props }) => {
                         key={project.key}
                         > 
                         <NextLink
-                            //href={ '/projects/' + project.content.Title.value}
                             href={`/projects/${project.key}`}
                             styles={{ textDecoration:'none'
                             }}>
@@ -49,6 +43,7 @@ const ProjectCard = ( { props }) => {
                              textDecoration: 'none'
                             }}>     
                                 <Box
+                                // when hovered, image will change and become white with description
                                 w='100%'
                                 h='100%'
                                 bgColor='white'
@@ -56,7 +51,6 @@ const ProjectCard = ( { props }) => {
                                 transition='opacity 0.2s ease-out'
                                 _hover={{ 
                                     opacity: 1, 
-                                    
                                 }}
                                 >
                                     

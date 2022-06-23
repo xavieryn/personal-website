@@ -2,6 +2,7 @@ import { Box, Heading, Image, Text } from "@chakra-ui/react";
 
 export default function ProjectPage( {project} ){
     const transformedProject = transformContent(project);
+    // organizes and maps code so that I am able to actually access the strings, files etc 
     let result = Object.keys(transformedProject).map((key) => [Number(key), transformedProject[key]]);
     console.log(result[1][1].ImageGallery.value[0]);
     return (
@@ -36,6 +37,7 @@ function transformContent(content) {
 
 export const getStaticPaths = async () => {
     const projects = await fetch("https://berowra.xavier.deta.app/api/collection/t7tp38g89mkw?content").then(r => r.json());
+    // grabs every single project from the cms, and matches it with the id
     const paths = projects.items.map((item) => transformContent(item)).map(project => {
       return {
       params: {
@@ -48,11 +50,10 @@ export const getStaticPaths = async () => {
         fallback: false,
     };
 }
+// retrieves project from berowa cms, adding the id so that it gets the correct project 
 export const getStaticProps = async ( context ) => {
   const project = await fetch("https://berowra.xavier.deta.app/api/content/" + context.params.id).then(r => r.json());
   return {
-    //project
     props: { project }
-
   }
 }

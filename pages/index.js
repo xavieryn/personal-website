@@ -28,7 +28,7 @@ export default function Home( { work, projects, other }) {
     </div>
   )
 }
-
+// gets all data and passes props to lots of parts of the code 
 export const getStaticProps = async () => {
   const work = await fetch("https://berowra.xavier.deta.app/api/collection/qey11kq2wxox?content").then(r => r.json());
   const projects = await fetch("https://berowra.xavier.deta.app/api/collection/t7tp38g89mkw?content").then(r => r.json());

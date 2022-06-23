@@ -3,6 +3,7 @@ import { FaGithub } from 'react-icons/fa';
 import React from 'react';
 
 const GitHubLink = ( {work} ) => {
+    // if there is github value in cms, then show
     if (work.content.GitHub.value) {
         return (
             <Center
@@ -14,6 +15,7 @@ const GitHubLink = ( {work} ) => {
             </Center>
         );
     }
+    // else show nothing
     else {
         return <Text></Text>
     }

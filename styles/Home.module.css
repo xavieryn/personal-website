@@ -45,6 +45,7 @@ a.socialLeft:hover {
   position: -webkit-sticky;
   top: 0;
   background-color: #9094EC;
+  z-index: 999999;
 }
 
 .navbarName {

@@ -5,6 +5,7 @@ import styles from '../../styles/Home.module.css'
 
 
 export default function SocialMedia() {
+    // links for my socials
     return (
     <Box className={styles.socialContainer}>
       

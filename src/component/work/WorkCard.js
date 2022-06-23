@@ -11,20 +11,15 @@ const WorkCard = ( { props } ) => {
             flexWrap="wrap"
             flexDirection='row'
             gap="1rem"
-            //justifyContent='center'
-            // w='calc(100% - 20px)'
             w="100%"
             padding='10px'   
             paddingLeft='2%'
             paddingRight='2%'
             justifyContent='center'                  
         >
-            {/* {props.items.map((project) => { */}
             {props.items.map((item) => transformContent(item)).map(work => {
-                
                 return (
                     // card 
-                   
                     <Box
                         style = {{ backgroundImage:`url(${"https://berowra.xavier.deta.app" + "/file/" + work.content.ImageGallery.value[0]})`,
                             aspectRatio:'16/11'
@@ -59,8 +54,7 @@ const WorkCard = ( { props } ) => {
                                     opacity: 1, 
                                     
                                 }}
-                                >
-                                    
+                                >            
                                     <Heading 
                                     textAlign='center'
                                      >

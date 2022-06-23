@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard';
 
 const Projects = ({ props }) => {
   return(  
-    <Box  >
+    <Box id='Projects' >
         <Heading fontSize={['1rem','2rem','3rem']} textAlign='center' as='h2' margin='2% 1.5%'>Projects</Heading>
         <ProjectCard props={props}/>
          
