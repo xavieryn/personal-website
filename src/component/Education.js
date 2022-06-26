@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Education( {props} ){
   return(  
-    <Box backgroundColor='#9094EC'  >
+    <Box backgroundColor='#9094EC' padding='0% 4% 4% 2%'>
         <Heading fontSize={['1rem','2rem','3rem']} textAlign='center' as='h2' margin='2% 1.5%'>Education</Heading>
         {/* {props.items.map((item) => transformContent(item)).map(education => {
              return(
@@ -17,14 +17,14 @@ export default function Education( {props} ){
              )
         })
         }  */}
-        <Box textAlign='center'>
+        <Box display='flex' alignItems='center' justifyContent='center' flexWrap='wrap'>
         {props.items.map((item) => transformContent(item)).map(education => {
                 return (
                     // card 
-                    <Box display='inline-block' maxW='500' > 
+                    <Box maxW='100%' w='500px' margin='0 auto' color='white'> 
                         <Box textAlign='center' >
                           {education.content.Title.value}
-                          <Image width='600' height='200' src={"https://berowra.xavier.deta.app" + "/file/" + education.content.Image.value[0]} alt='bruh'/>  
+                          <Image margin='0 auto' width='500' height='200' src={"https://berowra.xavier.deta.app" + "/file/" + education.content.Image.value[0]} alt='bruh'/>  
                         </Box>
                         <Box  >
                           {education.content.Skills.value}
