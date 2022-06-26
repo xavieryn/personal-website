@@ -1,12 +1,12 @@
-import { Box, Heading, Text, Image } from '@chakra-ui/layout';
+import { Box, Heading, Text, Image } from '@chakra-ui/react';
 import React from 'react';
 
 
-const Education = ({ props }) => {
+export default function Education( {props} ){
   return(  
-    <Box backgroundColor='#9094EC' >
+    <Box backgroundColor='#9094EC'  >
         <Heading fontSize={['1rem','2rem','3rem']} textAlign='center' as='h2' margin='2% 1.5%'>Education</Heading>
-         {props.items.map((item) => transformContent(item)).map(education => {
+        {/* {props.items.map((item) => transformContent(item)).map(education => {
              return(
                 <Box>
                     {education.content.Title.value}
@@ -16,12 +16,30 @@ const Education = ({ props }) => {
                 </Box>
              )
         })
-        } 
+        }  */}
+        <Box textAlign='center'>
+        {props.items.map((item) => transformContent(item)).map(education => {
+                return (
+                    // card 
+                    <Box display='inline-block' maxW='500' > 
+                        <Box textAlign='center' >
+                          {education.content.Title.value}
+                          <Image width='600' height='200' src={"https://berowra.xavier.deta.app" + "/file/" + education.content.Image.value[0]} alt='bruh'/>  
+                        </Box>
+                        <Box  >
+                          {education.content.Skills.value}
+                        </Box>
+                    </Box>
+                    
+                )
+            })
+            } 
+        </Box>
     </Box>
+    
     )
 };
 
-export default Education;
 
 function transformContent(content) {
     return {

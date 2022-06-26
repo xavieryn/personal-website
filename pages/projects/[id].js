@@ -16,6 +16,8 @@ export default function ProjectPage( {project} ){
         </Box>
        
         <Box padding='3% 2%'>
+          {console.log("https://berowra.xavier.deta.app" + "/file/" + result[1][1].ImageGallery.value[0])}
+          
           <Image height='40%' src={ "https://berowra.xavier.deta.app" + "/file/" + result[1][1].ImageGallery.value[0]} alt="why no work?"/> 
         
           <Box padding='5% .5%'>
